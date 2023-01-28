@@ -1,0 +1,48 @@
+server:
+  port: 8082
+
+person:
+  name: 18
+  address: [beijing, shanghai]
+
+msg1: "hello \n world"
+msg2: "hello \n world"
+
+spring:
+  profiles:
+    active: dev
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+
+  datasource:
+    #url: jdbc:mysql:///test?serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    #db.url=jdbc:mysql://localhost:3306/test?characterEncoding=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: liuxuan
+    password: jade
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  # Mapper映射文件路径
+  mapper-locations: classpath:mapper/*Mapper.xml
+  # 包扫描
+  type-aliases-package: com.liuxuan.repository.domain
+
+
+info:
+  name: hello
+  age: 23
+
+management:
+  #开启健康检查的完整信息
+  endpoint:
+    health:
+      show-details: always
+  #将所有的监控endPoints暴漏出来
+#  endpoints:
+#    web:
+#      exposure:
+#        include: *
+
