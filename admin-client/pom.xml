@@ -22,6 +22,17 @@
             <artifactId>spring-boot-admin-starter-client</artifactId>
             <version>3.0.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.vividsolutions</groupId>
+            <artifactId>jts</artifactId>
+            <version>1.13</version>
+        </dependency>
     </dependencies>
 
 </project>
